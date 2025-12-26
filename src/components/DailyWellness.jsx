@@ -1,15 +1,16 @@
 const DailyWellnes = () => {
   return (
     <section
-      className="w-full bg-[#AA335B] bg-repeat bg-center py-20"
+      className="relative w-full bg-[#AA335B] bg-repeat bg-center py-20 overflow-hidden"
       style={{
         backgroundImage: "url('/Paws.png')",
         fontFamily: "'ABeeZee', sans-serif",
       }}
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-center">
-        
+      {/* Content */}
+      <div className="max-w-7xl mx-auto px-6 flex flex-col items-center justify-center">
         <div className="text-center max-w-3xl">
+          
           {/* Heading */}
           <h1 className="text-3xl md:text-5xl font-normal leading-tight">
             <span className="text-[#D8A85B]">Daily wellness,</span>{" "}
@@ -24,11 +25,18 @@ const DailyWellnes = () => {
           </p>
 
           {/* Button */}
-          <button className="mt-8 bg-white text-[#AA335B] px-6 py-3 rounded-full text-sm font-medium hover:bg-[#D8A85B] hover:text-white transition inline-flex items-center gap-2">
-            Shop Now →
+          <button className="mt-8 bg-white text-[#AA335B] px-8 py-4 rounded-full text-sm font-bold hover:bg-[#D8A85B] hover:text-white transition inline-flex items-center gap-4">
+            Shop Now{" "}
+            <img src="/arrow.png" alt="Arrow" className="w-4 h-4" />
           </button>
         </div>
 
+        {/* Mobile Image */}
+        <img
+          src="/bull.png"
+          alt="Dog"
+          className="mt-8 md:absolute md:left-0 md:bottom-0 h-55 md:h-75"
+        />
       </div>
     </section>
   );
