@@ -5,6 +5,9 @@ import DailyWellness from './components/DailyWellness'
 import ChooseUs from './components/ChooseUs'
 import Product from './components/Product'
 import Testimonial from './components/Testimonial'
+import Faqs from './components/Faqs'
+import Pricing from './components/Pricing'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -16,6 +19,9 @@ function App() {
       <ChooseUs />
       <Product />
       <Testimonial />
+      <Faqs />
+      <Pricing />
+      <Footer />
     </>
   )
 }

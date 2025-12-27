@@ -48,7 +48,7 @@ const Testimonial = () => {
 
   return (
     <section
-      className="w-full py-20 px-4 bg-[#24263C] bg-no-repeat bg-center bg-cover"
+      className="w-full pt-20 pb-10 px-4 bg-[#24263C] bg-no-repeat bg-center bg-cover"
       style={{ backgroundImage: "url('/Paws1.png')" }}
     >
       <div className="max-w-7xl mx-auto text-center">
@@ -67,7 +67,7 @@ const Testimonial = () => {
               <div
                 key={item.id}
                 className={`relative rounded-xl px-6 pt-16 pb-20 text-left text-white overflow-visible transition-transform duration-300
-                  ${isActive ? "scale-105 border-2 border-white/20" : "border-3 border-white/20 scale-100"}`}
+                  ${isActive ? "scale-105 border-4 border-white/20" : "border-4 border-white/20 scale-100"}`}
                 style={{
                   backgroundColor: "#4b4e60",
                   backdropFilter: "blur(10px)",
