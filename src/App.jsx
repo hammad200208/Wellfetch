@@ -1,29 +1,19 @@
-import './App.css'
-import Hero from './components/Hero'
-import Navbar from './components/Navbar'
-import DailyWellness from './components/DailyWellness'
-import ChooseUs from './components/ChooseUs'
-import Product from './components/Product'
-import Testimonial from './components/Testimonial'
-import Faqs from './components/Faqs'
-import Pricing from './components/Pricing'
-import Footer from './components/Footer'
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar.jsx";
+import Home from "./pages/Home.jsx";
+import Signup from "./pages/Signup.jsx";
 
 function App() {
-
   return (
-    <>
+    <Router>
       <Navbar />
-      <Hero />
-      <DailyWellness />
-      <ChooseUs />
-      <Product />
-      <Testimonial />
-      <Faqs />
-      <Pricing />
-      <Footer />
-    </>
-  )
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<Signup />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

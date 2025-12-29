@@ -1,8 +1,13 @@
 import { useState } from "react";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
+import { Link } from "react-router-dom";
+
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // 🔐 simulate login state
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
     <nav className="w-full bg-white">
@@ -13,7 +18,9 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-700">
+          <Link to="/home">
           <li className="hover:text-[#D8A85B] cursor-pointer">HOME</li>
+          </Link>
           <li className="hover:text-[#D8A85B] cursor-pointer">SHOP</li>
           <li className="hover:text-[#D8A85B] cursor-pointer">BLOGS</li>
           <li className="hover:text-[#D8A85B] cursor-pointer">CONTACT US</li>
@@ -21,10 +28,27 @@ const Navbar = () => {
 
         {/* Right Section */}
         <div className="flex items-center space-x-4">
-          {/* Sign In */}
-          <button className="hidden md:block bg-[#4C9E84] text-white px-8 py-2 rounded-full text-sm font-medium hover:bg-[#D8A85B] transition">
-            SIGN IN
-          </button>
+          
+          {/* SIGN IN (only if NOT logged in) */}
+          {!isLoggedIn && (
+            <Link to="/signup">
+            <button
+              onClick={() => setIsLoggedIn(true)}
+              className="hidden md:block bg-[#4C9E84] text-white px-8 py-2 rounded-full text-sm font-medium hover:bg-[#D8A85B] transition"
+            >
+              SIGN IN
+            </button>
+            </Link>
+          )}
+
+          {/* USER ICON (only if logged in) */}
+          {isLoggedIn && (
+            <img
+              src="/user.png"
+              alt="User"
+              className="h-8 w-8 rounded-full cursor-pointer hidden md:block"
+            />
+          )}
 
           {/* Cart */}
           <img
@@ -33,7 +57,7 @@ const Navbar = () => {
             className="h-5 w-5 cursor-pointer"
           />
 
-          {/* Mobile Menu Icon */}
+          {/* Mobile Menu Button */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="md:hidden text-gray-700 text-2xl"
@@ -52,9 +76,29 @@ const Navbar = () => {
             <li className="hover:text-[#D8A85B] cursor-pointer">BLOGS</li>
             <li className="hover:text-[#D8A85B] cursor-pointer">CONTACT US</li>
 
-            <button className="bg-[#4C9E84] text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-[#D8A85B] transition w-fit">
-              SIGN IN
-            </button>
+            {/* Mobile Sign In */}
+            {!isLoggedIn && (
+              <Link to="/signup">
+              <button
+                onClick={() => {
+                  setIsLoggedIn(true);
+                  setMenuOpen(false);
+                }}
+                className="bg-[#4C9E84] text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-[#D8A85B] transition w-fit"
+              >
+                SIGN IN
+              </button> 
+              </Link>
+            )}
+
+            {/* Mobile User Icon */}
+            {isLoggedIn && (
+              <img
+                src="/user.png"
+                alt="User"
+                className="h-8 w-8 rounded-full cursor-pointer"
+              />
+            )}
           </ul>
         </div>
       )}
