@@ -1,9 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; 
 
-// Custom Icons
-import EyeIcon from "/eye.png";
-import GoogleIcon from "/Google.png";
-import MicrosoftIcon from "/Microsoft.png";
 
 const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -84,7 +81,7 @@ const Signup = () => {
                   className="absolute right-3 top-1/2 -translate-y-1/2"
                 >
                   <img
-                    src={EyeIcon}
+                    src="/eye.png"
                     alt="Toggle password"
                     className="w-5 h-5"
                   />
@@ -99,12 +96,14 @@ const Signup = () => {
             </div>
 
             {/* Signup Button */}
+            <Link to="/login">
             <button
               type="submit"
               className="w-full bg-[#DDB370] text-[#FFFFFF] py-2 rounded-md font-medium hover:opacity-90 transition"
             >
               Signup
             </button>
+            </Link>
           </form>
 
           {/* OR */}
@@ -117,12 +116,12 @@ const Signup = () => {
           {/* Social Signup */}
           <div className="flex gap-3">
             <button className="flex-1 border border-[#E0E3E8] text-[#7E8B9E] rounded-md py-2 text-sm flex items-center justify-center gap-2 hover:bg-gray-50">
-              <img src={GoogleIcon} alt="Google" className="w-5 h-5" />
+              <img src="/Google.png" alt="Google" className="w-5 h-5" />
               Signup with Google
             </button>
 
             <button className="flex-1 border border-[#E0E3E8] text-[#7E8B9E] rounded-md py-2 text-sm flex items-center justify-center gap-2 hover:bg-gray-50">
-              <img src={MicrosoftIcon} alt="Microsoft" className="w-5 h-5" />
+              <img src="/Microsoft.png" alt="Microsoft" className="w-5 h-5" />
               Signup with Microsoft
             </button>
           </div>

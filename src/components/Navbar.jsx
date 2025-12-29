@@ -18,10 +18,12 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-700">
-          <Link to="/home">
+          <Link to="/">
           <li className="hover:text-[#D8A85B] cursor-pointer">HOME</li>
           </Link>
+          <Link to="/shop">
           <li className="hover:text-[#D8A85B] cursor-pointer">SHOP</li>
+          </Link>
           <li className="hover:text-[#D8A85B] cursor-pointer">BLOGS</li>
           <li className="hover:text-[#D8A85B] cursor-pointer">CONTACT US</li>
         </ul>
@@ -46,7 +48,7 @@ const Navbar = () => {
             <img
               src="/user.png"
               alt="User"
-              className="h-8 w-8 rounded-full cursor-pointer hidden md:block"
+              className="h-6 w-6 rounded-full cursor-pointer hidden md:block"
             />
           )}
 
@@ -71,8 +73,12 @@ const Navbar = () => {
       {menuOpen && (
         <div className="md:hidden bg-white shadow-md">
           <ul className="flex flex-col space-y-4 px-6 py-4 text-sm font-medium text-gray-700">
+            <Link to="/">
             <li className="hover:text-[#D8A85B] cursor-pointer">HOME</li>
+            </Link>
+            <Link to="/shop">
             <li className="hover:text-[#D8A85B] cursor-pointer">SHOP</li>
+            </Link>
             <li className="hover:text-[#D8A85B] cursor-pointer">BLOGS</li>
             <li className="hover:text-[#D8A85B] cursor-pointer">CONTACT US</li>
 
