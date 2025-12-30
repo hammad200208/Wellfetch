@@ -1,5 +1,6 @@
 import React from "react";
 import { FiEye, FiArrowLeft, FiArrowRight } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 
 const products = [
   { id: 1, image: "/product1.png", title: "Allergy Soft Chews", price: "$132.93" },
@@ -13,11 +14,19 @@ const products = [
 ];
 
 const Product = () => {
+  const navigate = useNavigate();
+
+  const handleAddToCart = (id) => {
+    if (id === 1) {
+      navigate("/allergy");
+    }
+  };
+
   return (
     <section className="w-full bg-white py-10 px-4">
       <div className="max-w-7xl mx-auto">
 
-        {/* ---------- PRODUCTS GRID ---------- */}
+        {/* PRODUCTS GRID */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((item) => (
             <div
@@ -37,7 +46,11 @@ const Product = () => {
                 {item.price}
               </p>
 
-              <button className="flex items-center gap-2 font-bold text-sm text-[#A37E65] border border-[#A37E65] px-4 py-2 rounded-full hover:bg-[#A37E65] hover:text-white transition">
+              {/* ADD TO CART */}
+              <button
+                onClick={() => handleAddToCart(item.id)}
+                className="flex items-center gap-2 font-bold text-sm text-[#A37E65] border border-[#A37E65] px-4 py-2 rounded-full hover:bg-[#A37E65] hover:text-white transition"
+              >
                 Add to cart
               </button>
 
@@ -48,42 +61,25 @@ const Product = () => {
           ))}
         </div>
 
-        {/* ---------- PAGINATION ---------- */}
+        {/* PAGINATION */}
         <div className="flex items-center justify-between mt-12 w-full max-w-4xl mx-auto">
-
-          {/* Previous */}
           <button className="flex items-center gap-2 px-4 py-2 border border-[#0000001A] rounded-full text-sm font-semibold text-black hover:bg-gray-100 transition">
             <FiArrowLeft className="text-sm" /> Previous
           </button>
 
-          {/* Page Numbers */}
           <div className="flex items-center gap-2 text-sm">
-            <button className="w-8 h-8 flex items-center justify-center rounded-md bg-gray-100 font-medium">
-              1
-            </button>
-            <button className="w-8 h-8 flex items-center justify-center rounded-md hover:bg-gray-100">
-              2
-            </button>
-            <button className="w-8 h-8 flex items-center justify-center rounded-md hover:bg-gray-100">
-              3
-            </button>
+            <button className="w-8 h-8 rounded-md bg-gray-100 font-medium">1</button>
+            <button className="w-8 h-8 rounded-md hover:bg-gray-100">2</button>
+            <button className="w-8 h-8 rounded-md hover:bg-gray-100">3</button>
             <span className="px-2">...</span>
-            <button className="w-8 h-8 flex items-center justify-center rounded-md hover:bg-gray-100">
-              8
-            </button>
-            <button className="w-8 h-8 flex items-center justify-center rounded-md hover:bg-gray-100">
-              9
-            </button>
-            <button className="w-8 h-8 flex items-center justify-center rounded-md hover:bg-gray-100">
-              10
-            </button>
+            <button className="w-8 h-8 rounded-md hover:bg-gray-100">8</button>
+            <button className="w-8 h-8 rounded-md hover:bg-gray-100">9</button>
+            <button className="w-8 h-8 rounded-md hover:bg-gray-100">10</button>
           </div>
 
-          {/* Next */}
           <button className="flex items-center gap-2 px-6 py-2 border border-[#0000001A] rounded-xl text-sm font-semibold text-black hover:bg-gray-100 transition">
             Next <FiArrowRight className="text-sm" />
           </button>
-
         </div>
       </div>
     </section>
