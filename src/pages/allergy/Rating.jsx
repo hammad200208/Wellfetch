@@ -55,7 +55,7 @@ const StarRating = ({ rating }) => {
         <img key={i} src="/star.png" alt="star" className="w-4 h-4" />
       ))}
       {hasHalfStar && (
-        <img src="/halfstar.png" alt="half star" className="w-4 h-4" />
+        <img src="/halfstar.png" alt="half star" className="w-3 h-4" />
       )}
     </div>
   );
@@ -86,15 +86,16 @@ const Rating = () => {
         </span>
 
         <div className="flex items-center gap-3">
-          {/* Filter Button */}
-          <button className="border rounded-full w-9 h-9 flex items-center justify-center">
-            <img src="/filter.png" alt="filter" className="w-4 h-4" />
+          <button className="flex items-center justify-center w-12 h-12 min-w-12 min-h-12 bg-[#F0F0F0] rounded-full">
+            <img src="/filter2.png" alt="filter" className="w-5 h-5" />
           </button>
 
-          <button className="border rounded-full px-4 py-1.5 text-sm text-gray-700">
-            Latest
+          <button className="flex items-center gap-2 bg-[#F0F0F0] text-black text-sm px-6 py-3 rounded-full font-medium">
+            latest
+            <img src="/downarrow2.png" alt="down arrow" className="w-2 h-2" />
           </button>
-           <button className="bg-black text-white px-5 py-1.5 rounded-full text-sm">
+
+          <button className="bg-black text-white px-5 py-1.5 rounded-full text-sm">
             Write a Review
           </button>
         </div>
@@ -147,8 +148,8 @@ const Rating = () => {
 
       {/* Write a Review Button */}
       <div className="flex justify-center mt-8">
-        <button className="bg-black text-white px-6 py-2 rounded-full text-sm font-medium">
-          Write a Review
+        <button className="bg-[#D8A85B] text-white px-6 py-2 rounded-full text-sm font-medium">
+          Load More Reviews
         </button>
       </div>
     </section>
