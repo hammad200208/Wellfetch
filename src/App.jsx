@@ -8,6 +8,9 @@ import Shop from "./pages/shop/Shop.jsx";
 import Allergy from "./pages/allergy/Allergy.jsx";
 import Cart from "./pages/cart/Cart.jsx";
 import Billing from "./pages/billing/Billing.jsx";
+import Profile from "./pages/profile/Profile.jsx";
+import Address from "./pages/address/Address.jsx";
+import Payment from "./pages/payment/Payment.jsx";
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
         <Route path="/allergy" element={<Allergy />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/billing" element={<Billing />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/address" element={<Address />} />
+        <Route path="/payment" element={<Payment />} />
       </Routes>
     </Router>
   );
