@@ -45,19 +45,23 @@ const Navbar = () => {
 
           {/* USER ICON (only if logged in) */}
           {isLoggedIn && (
+            <Link to="/profile">
             <img
               src="/user.png"
               alt="User"
               className="h-6 w-6 rounded-full cursor-pointer hidden md:block"
             />
+            </Link>
           )}
 
           {/* Cart */}
+          <Link to="/cart">
           <img
             src="/shopping-cart.png"
             alt="Cart"
             className="h-5 w-5 cursor-pointer"
           />
+          </Link>
 
           {/* Mobile Menu Button */}
           <button
@@ -99,11 +103,13 @@ const Navbar = () => {
 
             {/* Mobile User Icon */}
             {isLoggedIn && (
+              <Link to="/profile">
               <img
                 src="/user.png"
                 alt="User"
                 className="h-8 w-8 rounded-full cursor-pointer"
               />
+              </Link>
             )}
           </ul>
         </div>
