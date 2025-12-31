@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Cart = () => {
   return (
     <section>
-        <div className="w-full bg-white py-10 px-4">
+        <div className="w-full bg-white pt-30 pb-10 px-4">
       <div className="max-w-5xl mx-auto">
         {/* Breadcrumb */}
         <p className="text-sm text-gray-400 mb-4">

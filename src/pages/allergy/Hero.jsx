@@ -5,7 +5,7 @@ const Hero = () => {
   const [plan, setPlan] = useState("subscribe");
 
   return (
-    <section className="w-full bg-white py-10 px-4">
+    <section className="w-full bg-white pt-30 pb-10 px-4">
       <div className="max-w-6xl mx-auto">
 
         {/* ---------- BREADCRUMB ---------- */}
