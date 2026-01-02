@@ -20,8 +20,9 @@ const Payment = () => {
                   Manage My Account
                 </h3>
                 <ul className="space-y-2 text-sm text-black/60">
-                  <li className="cursor-pointer">My Profile</li>
-
+                  <Link to="/profile">
+                    <li className="cursor-pointer">My Profile</li>
+                  </Link>
                   <Link to="/address">
                     <li className="cursor-pointer">Address Book</li>
                   </Link>
@@ -37,8 +38,15 @@ const Payment = () => {
                   My Subscriptions
                 </h3>
                 <ul className="space-y-2 text-sm text-black/60">
+                  <Link to="/active">
                   <li className="cursor-pointer">Active</li>
+                  </Link>
+                  <Link to="/paused">
                   <li className="cursor-pointer">Paused</li>
+                  </Link>
+                  <Link to="/cancelled">
+                  <li className="cursor-pointer">Cancelled</li>
+                  </Link>
                 </ul>
               </div>
             </aside>

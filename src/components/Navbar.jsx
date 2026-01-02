@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // 🔐 simulate login state
+  // simulate login state
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (

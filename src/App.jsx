@@ -11,6 +11,7 @@ import Billing from "./pages/billing/Billing.jsx";
 import Profile from "./pages/profile/Profile.jsx";
 import Address from "./pages/address/Address.jsx";
 import Payment from "./pages/payment/Payment.jsx";
+import Active from "./pages/active/Active.jsx";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/address" element={<Address />} />
         <Route path="/payment" element={<Payment />} />
+        <Route path="/active" element={<Active />} />
       </Routes>
     </Router>
   );
