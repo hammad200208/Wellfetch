@@ -14,6 +14,10 @@ import Payment from "./pages/payment/Payment.jsx";
 import Active from "./pages/active/Active.jsx";
 import Paused from "./pages/paused/Paused.jsx";
 import Cancelled from "./pages/cancelled/Cancelled.jsx";
+import Blogs from "./pages/blogs/Blogs.jsx";
+import Premium from "./pages/premium/Premium.jsx";
+import Contact from "./pages/contact/Contact.jsx";
+
 
 function App() {
   return (
@@ -33,6 +37,9 @@ function App() {
         <Route path="/active" element={<Active />} />
         <Route path="/paused" element={<Paused />} />
         <Route path="/cancelled" element={<Cancelled />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/premium" element={<Premium />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );

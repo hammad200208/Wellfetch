@@ -8,15 +8,15 @@ const Hero = () => {
         <h1
           className="text-4xl font-bold mb-3 text-[#D8A85B]"
         >
-          Our Products
+          Exploring New Articles
         </h1>
 
         {/* Subtitle */}
         <p
           className="text-sm mb-8 text-[#000000] max-w-xl mx-auto"
         >
-          From allergy relief to tummy tamers, explore our range of
-          vet-formulated soft chews designed to keep your dog happy and healthy.
+          Explore our articles for expert advice, heartwarming stories, and the latest in canine
+health and happiness.
         </p>
 
         {/* Search + Filters */}

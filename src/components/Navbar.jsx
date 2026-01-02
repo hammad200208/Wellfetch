@@ -24,8 +24,12 @@ const Navbar = () => {
           <Link to="/shop">
           <li className="hover:text-[#D8A85B] cursor-pointer">SHOP</li>
           </Link>
+          <Link to="/blogs">
           <li className="hover:text-[#D8A85B] cursor-pointer">BLOGS</li>
+          </Link>
+          <Link to="/contact">
           <li className="hover:text-[#D8A85B] cursor-pointer">CONTACT US</li>
+          </Link>
         </ul>
 
         {/* Right Section */}
@@ -83,8 +87,12 @@ const Navbar = () => {
             <Link to="/shop">
             <li className="hover:text-[#D8A85B] cursor-pointer">SHOP</li>
             </Link>
+            <Link to="/blogs">
             <li className="hover:text-[#D8A85B] cursor-pointer">BLOGS</li>
+            </Link>
+            <Link to="/contact">
             <li className="hover:text-[#D8A85B] cursor-pointer">CONTACT US</li>
+            </Link>
 
             {/* Mobile Sign In */}
             {!isLoggedIn && (
