@@ -12,6 +12,8 @@ import Profile from "./pages/profile/Profile.jsx";
 import Address from "./pages/address/Address.jsx";
 import Payment from "./pages/payment/Payment.jsx";
 import Active from "./pages/active/Active.jsx";
+import Paused from "./pages/paused/Paused.jsx";
+import Cancelled from "./pages/cancelled/Cancelled.jsx";
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
         <Route path="/address" element={<Address />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/active" element={<Active />} />
+        <Route path="/paused" element={<Paused />} />
+        <Route path="/cancelled" element={<Cancelled />} />
       </Routes>
     </Router>
   );
